@@ -1,6 +1,7 @@
 function NavBar({setPokemonIndex, pokemonList, pokemonIndex}) {
     const handleNext = () => {
         setPokemonIndex((prevIndex) => (prevIndex + 1));
+        pokemonList[pokemonIndex + 1].name === "pikachu" ? alert("pika pikachu !!!") : null;
     }
     const handlePrev = () => {
         setPokemonIndex((prevIndex) => (prevIndex - 1));
