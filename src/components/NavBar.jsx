@@ -1,4 +1,4 @@
-function NavBar({setPokemonIndex}) {
+function NavBar({setPokemonIndex, pokemonList, pokemonIndex}) {
     const handleNext = () => {
         setPokemonIndex((prevIndex) => (prevIndex + 1));
     }
@@ -7,8 +7,8 @@ function NavBar({setPokemonIndex}) {
     }
     return (
         <div>
-            <button onClick={handlePrev}>Précédent</button>
-            <button onClick={handleNext}>Suivant</button>
+            {pokemonIndex > 0 ? <button onClick={handlePrev}>Précédent</button> : null}
+            {pokemonIndex < pokemonList.length - 1 ? <button onClick={handleNext}>Suivant</button> : null}
         </div>
     )
 }
