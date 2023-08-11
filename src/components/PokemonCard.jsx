@@ -4,9 +4,9 @@ function PokemonCard({pokemon}) {
     
     console.log(pokemon);
     return (
-        <figure>
-            {pokemon.imgSrc ? <img src={pokemon.imgSrc} /> : <p>???</p>}
-            <figcaption>{pokemon.name}</figcaption>
+        <figure className="card">
+            {pokemon.imgSrc ? <img src={pokemon.imgSrc} className="card-img"/> : <p>???</p>}
+            <figcaption>{pokemon.name.toUpperCase()}</figcaption>
         </figure>
     )
 }
